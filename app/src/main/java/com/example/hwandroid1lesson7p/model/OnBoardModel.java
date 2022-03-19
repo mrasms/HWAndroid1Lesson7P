@@ -2,9 +2,9 @@ package com.example.hwandroid1lesson7p.model;
 
 public class OnBoardModel {
 
-    private int image;
-    private String title;
-    private String description;
+    private final int image;
+    private final String title;
+    private final String description;
 
 
     public OnBoardModel(int image, String title, String description) {

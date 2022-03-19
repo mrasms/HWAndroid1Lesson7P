@@ -21,7 +21,6 @@ import java.util.ArrayList;
 public class OnBoardActivity extends AppCompatActivity {
     private ActivityOnBoardBinding binding;
     private ArrayList<OnBoardModel> list = new ArrayList<>();
-    private TabLayoutMediator layoutMediator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,14 +33,41 @@ public class OnBoardActivity extends AppCompatActivity {
     }
 
     private void setupData() {
-        list.add(new OnBoardModel(R.drawable.wallet, "some first text here", "№1 сюда добавляю большое описание прям на много строк и как нибудь придумаю как выровнять его по центру"));
-        list.add(new OnBoardModel(R.drawable.money_bag, "some second text here", "№2 сюда добавляю большое описание прям на много строк и как нибудь придумаю как выровнять его по центру"));
-        list.add(new OnBoardModel(R.drawable.wallet, "some third text here", "№3 сюда добавляю большое описание прям на много строк и как нибудь придумаю как выровнять его по центру" +
-                "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" +
-                "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" +
-                "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" +
-                "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" +
-                "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"));
+        list.add(new OnBoardModel(R.drawable.wallet, "Кошелёк", "№1 сюда добавляю большое описание прям на много строк и как нибудь придумаю как выровнять его по центру"));
+        list.add(new OnBoardModel(R.drawable.money_bag, "Мешок (предположительно с деньгами)", "№2 сюда добавляю большое описание прям на много строк и как нибудь придумаю как выровнять его по центру"));
+        list.add(new OnBoardModel(R.drawable.piggy_bank, "Копилка", "№3 сюда добавляю большое описание прям на много строк и как нибудь придумаю как выровнять его по центру" +
+                "Кстати! Этот текст можно прокрутить вниз / вверх, дальше напишу стих Маяковского про то как он кое-что достаёт из широких штанин " +
+                "С каким наслажденьем " +
+                "жандармской кастой " +
+                "я был бы " +
+                "исхлестан и распят " +
+                "за то, " +
+                "что в руках у меня " +
+                "молоткастый, " +
+                "серпастый " +
+                "советский паспорт. " +
+                "Я волком бы " +
+                "выгрыз " +
+                "бюрократизм. " +
+                "К мандатам " +
+                "почтения нету. " +
+                "К любым " +
+                "чертям с матерями " +
+                "катись " +
+                "любая бумажка. " +
+                "Но  эту… " +
+                "Я " +
+                "достаю " +
+                "из широких штанин " +
+                "дубликатом " +
+                "бесценного груза. " +
+                "Читайте, " +
+                "завидуйте, " +
+                "я —" +
+                "гражданин " +
+                "Советского Союза." +
+                "" +
+                ""));
         AdapterOnBoard adapterOnBoard = new AdapterOnBoard(getSupportFragmentManager(), getLifecycle(), list);
         binding.pager.setAdapter(adapterOnBoard);
     }
