@@ -37,7 +37,7 @@ public class OnBoardActivity extends AppCompatActivity {
         list.add(new OnBoardModel(R.drawable.money_bag, "Мешок (предположительно с деньгами)", "№2 сюда добавляю большое описание прям на много строк и как нибудь придумаю как выровнять его по центру"));
         list.add(new OnBoardModel(R.drawable.piggy_bank, "Копилка", "№3 сюда добавляю большое описание прям на много строк и как нибудь придумаю как выровнять его по центру" +
                 "Кстати! Этот текст можно прокрутить вниз / вверх, дальше напишу стих Маяковского про то как он кое-что достаёт из широких штанин " +
-                "С каким наслажденьем " +
+                "\n" + " С каким наслажденьем " +
                 "жандармской кастой " +
                 "я был бы " +
                 "исхлестан и распят " +
@@ -65,9 +65,7 @@ public class OnBoardActivity extends AppCompatActivity {
                 "завидуйте, " +
                 "я —" +
                 "гражданин " +
-                "Советского Союза." +
-                "" +
-                ""));
+                "Советского Союза."));
         AdapterOnBoard adapterOnBoard = new AdapterOnBoard(getSupportFragmentManager(), getLifecycle(), list);
         binding.pager.setAdapter(adapterOnBoard);
     }

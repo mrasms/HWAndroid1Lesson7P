@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:gravity="center"
-        android:maxLines="7"
+        android:maxLines="6"
         android:paddingHorizontal="50sp"
         android:scrollbars="vertical"
         android:text="@string/hello_blank_fragment"
